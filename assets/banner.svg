@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 210" width="100%" height="210" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14"/>
+      <stop offset="50%" stop-color="#0D111A"/>
+      <stop offset="100%" stop-color="#0B0F18"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyanVioletGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#7000FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#00F0FF"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#7000FF" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Subtle Radial Glows -->
+    <radialGradient id="cyanGlow" cx="10%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="violetGlow" cx="90%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Pattern Grid -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .title { font-weight: 800; font-size: 34px; letter-spacing: -0.5px; fill: url(#textGrad); }
+    .badge-text { font-size: 11px; font-weight: 600; letter-spacing: 0.8px; fill: #00F0FF; }
+    .subhead { font-size: 14.5px; font-weight: 500; fill: #94A3B8; letter-spacing: 0.2px; }
+    .metric-label { font-size: 10px; font-weight: 600; letter-spacing: 1.2px; fill: #64748B; }
+    .metric-val { font-size: 12px; font-weight: 700; fill: #CBD5E1; }
+  </style>
+
+  <!-- Container Box -->
+  <rect width="848" height="208" x="1" y="1" rx="10" fill="url(#bgGradient)" stroke="url(#borderGrad)" stroke-width="1.2"/>
+  
+  <!-- Subtle Background Grid -->
+  <rect width="848" height="208" x="1" y="1" rx="10" fill="url(#grid)"/>
+
+  <!-- Glow Overlays -->
+  <rect width="848" height="208" x="1" y="1" rx="10" fill="url(#cyanGlow)"/>
+  <rect width="848" height="208" x="1" y="1" rx="10" fill="url(#violetGlow)"/>
+
+  <!-- Left Accent Bar -->
+  <rect x="1" y="30" width="3.5" height="150" rx="1.75" fill="url(#cyanVioletGrad)"/>
+
+  <!-- Status Pill (Top Left) -->
+  <g transform="translate(34, 26)">
+    <rect width="260" height="24" rx="12" fill="#00F0FF" fill-opacity="0.08" stroke="#00F0FF" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="13" cy="12" r="4" fill="#00F0FF">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="25" y="15.5" class="mono badge-text">STUDENT DEVELOPER • AI &amp; ML</text>
+  </g>
+
+  <!-- Academic Tag (Top Right) -->
+  <g transform="translate(560, 26)">
+    <rect width="256" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.08" stroke="#8B5CF6" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="13" cy="12" r="4" fill="#A855F7"/>
+    <text x="25" y="15.5" class="mono" font-size="11px" font-weight="600" letter-spacing="0.6px" fill="#C084FC">PRESIDENCY UNIV. • 2025–2029</text>
+  </g>
+
+  <!-- Hero Name -->
+  <text x="34" y="96" class="sans title">SHAIK IRFAN</text>
+
+  <!-- Primary Subtitle -->
+  <text x="34" y="128" class="sans subhead">
+    Applied AI Engineering <tspan fill="#00F0FF">|</tspan> RAG Systems <tspan fill="#8B5CF6">|</tspan> Intelligent Software Systems
+  </text>
+
+  <!-- Horizontal Divider Line -->
+  <line x1="34" y1="148" x2="816" y2="148" stroke="#1E293B" stroke-width="1"/>
+  <line x1="34" y1="148" x2="210" y2="148" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.8"/>
+
+  <!-- Engineering Pillars / Telemetry Row -->
+  <g transform="translate(34, 164)">
+    <!-- Column 1 -->
+    <text x="0" y="11" class="mono metric-label">ARCHITECTURE</text>
+    <text x="0" y="27" class="mono metric-val">Deterministic AI &amp; Logic</text>
+
+    <!-- Column 2 -->
+    <text x="250" y="11" class="mono metric-label">PRIVACY &amp; SECURITY</text>
+    <text x="250" y="27" class="mono metric-val">On-Device Context Redaction</text>
+
+    <!-- Column 3 -->
+    <text x="520" y="11" class="mono metric-label">KNOWLEDGE ASSISTANCE</text>
+    <text x="520" y="27" class="mono metric-val">Grounded RAG &amp; Vector Indexing</text>
+  </g>
+</svg>
