@@ -1,112 +1,193 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 210" width="100%" height="210" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="100%" height="230" fill="none">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080C14"/>
-      <stop offset="50%" stop-color="#0D111A"/>
-      <stop offset="100%" stop-color="#0B0F18"/>
+    <!-- Deep Cosmic Obsidian & Astral Gradient -->
+    <linearGradient id="cosmicVoid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08070E"/>
+      <stop offset="45%" stop-color="#0E0B1A"/>
+      <stop offset="85%" stop-color="#140C24"/>
+      <stop offset="100%" stop-color="#1F0D15"/>
     </linearGradient>
 
-    <!-- Accent Gradients -->
-    <linearGradient id="cyanVioletGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F0FF"/>
-      <stop offset="50%" stop-color="#7000FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
+    <!-- Eldritch Fiery Spark Gradient -->
+    <linearGradient id="eldritchGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5400"/>
+      <stop offset="35%" stop-color="#FF9E00"/>
+      <stop offset="70%" stop-color="#FFD000"/>
+      <stop offset="100%" stop-color="#FF5400"/>
     </linearGradient>
 
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="60%" stop-color="#E2E8F0"/>
-      <stop offset="100%" stop-color="#00F0FF"/>
+    <!-- Agamotto Time Stone Astral Glow -->
+    <linearGradient id="timeStone" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F5D4"/>
+      <stop offset="50%" stop-color="#00BBF9"/>
+      <stop offset="100%" stop-color="#05FFA1"/>
     </linearGradient>
 
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.6"/>
-      <stop offset="40%" stop-color="#7000FF" stop-opacity="0.3"/>
-      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.2"/>
+    <!-- Border Radiant Sparks -->
+    <linearGradient id="sparksBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9E00" stop-opacity="0.8"/>
+      <stop offset="25%" stop-color="#7209B7" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#00F5D4" stop-opacity="0.7"/>
+      <stop offset="75%" stop-color="#FF5400" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFD000" stop-opacity="0.9"/>
     </linearGradient>
 
-    <!-- Subtle Radial Glows -->
-    <radialGradient id="cyanGlow" cx="10%" cy="20%" r="40%">
-      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+    <!-- Radial Tao Mandala Center Glow -->
+    <radialGradient id="mandalaCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD000" stop-opacity="0.6"/>
+      <stop offset="35%" stop-color="#FF7A00" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#7209B7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#08070E" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="violetGlow" cx="90%" cy="80%" r="50%">
-      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Pattern Grid -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.4"/>
+    <!-- Background Grid Pattern -->
+    <pattern id="astralGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#2D1B4E" stroke-width="0.6" stroke-opacity="0.35"/>
+      <circle cx="28" cy="28" r="0.8" fill="#FF9E00" fill-opacity="0.4"/>
     </pattern>
+
+    <!-- Filter for Eldritch Sparks Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <style>
-    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
-    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-    .title { font-weight: 800; font-size: 34px; letter-spacing: -0.5px; fill: url(#textGrad); }
-    .badge-text { font-size: 11px; font-weight: 600; letter-spacing: 0.8px; fill: #00F0FF; }
-    .subhead { font-size: 14.5px; font-weight: 500; fill: #94A3B8; letter-spacing: 0.2px; }
-    .metric-label { font-size: 10px; font-weight: 600; letter-spacing: 1.2px; fill: #64748B; }
-    .metric-val { font-size: 12px; font-weight: 700; fill: #CBD5E1; }
+    .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .strange-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 900; letter-spacing: 2.5px; fill: #FFF7ED; }
+    .rune-text { font-family: ui-monospace, "Courier New", monospace; font-size: 8.5px; letter-spacing: 1.5px; fill: #FFB703; font-weight: bold; }
+    .subtext { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13.5px; font-weight: 500; fill: #CBD5E1; }
+    .hud-label { font-family: ui-monospace, monospace; font-size: 10px; font-weight: 700; letter-spacing: 1px; fill: #FB8500; }
+    .hud-val { font-family: ui-monospace, monospace; font-size: 11.5px; font-weight: 600; fill: #E2E8F0; }
   </style>
 
-  <!-- Container Box -->
-  <rect width="848" height="208" x="1" y="1" rx="10" fill="url(#bgGradient)" stroke="url(#borderGrad)" stroke-width="1.2"/>
-  
-  <!-- Subtle Background Grid -->
-  <rect width="848" height="208" x="1" y="1" rx="10" fill="url(#grid)"/>
+  <!-- Base Canvas -->
+  <rect width="898" height="228" x="1" y="1" rx="14" fill="url(#cosmicVoid)" stroke="url(#sparksBorder)" stroke-width="1.8"/>
+  <rect width="898" height="228" x="1" y="1" rx="14" fill="url(#astralGrid)"/>
 
-  <!-- Glow Overlays -->
-  <rect width="848" height="208" x="1" y="1" rx="10" fill="url(#cyanGlow)"/>
-  <rect width="848" height="208" x="1" y="1" rx="10" fill="url(#violetGlow)"/>
+  <!-- Mystic Spark Ambience (Left & Right) -->
+  <circle cx="730" cy="115" r="150" fill="url(#mandalaCore)"/>
+  <circle cx="80" cy="30" r="100" fill="#FF5400" fill-opacity="0.06"/>
+  <circle cx="450" cy="200" r="120" fill="#7209B7" fill-opacity="0.08"/>
 
-  <!-- Left Accent Bar -->
-  <rect x="1" y="30" width="3.5" height="150" rx="1.75" fill="url(#cyanVioletGrad)"/>
-
-  <!-- Status Pill (Top Left) -->
-  <g transform="translate(34, 26)">
-    <rect width="260" height="24" rx="12" fill="#00F0FF" fill-opacity="0.08" stroke="#00F0FF" stroke-opacity="0.3" stroke-width="1"/>
-    <circle cx="13" cy="12" r="4" fill="#00F0FF">
-      <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Top HUD Status Ribbon -->
+  <g transform="translate(35, 24)">
+    <rect width="320" height="24" rx="12" fill="#FF5400" fill-opacity="0.12" stroke="#FF9E00" stroke-opacity="0.5" stroke-width="1"/>
+    <!-- Pulsing Time Stone Eye Dot -->
+    <circle cx="14" cy="12" r="4.5" fill="#00F5D4">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="4;5.5;4" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <text x="25" y="15.5" class="mono badge-text">STUDENT DEVELOPER • AI &amp; ML</text>
+    <text x="28" y="15.5" class="mono" font-size="10.5px" font-weight="700" letter-spacing="1px" fill="#FFB703">SANCTUM OF INTELLIGENCE &bull; ONLINE</text>
   </g>
 
-  <!-- Academic Tag (Top Right) -->
-  <g transform="translate(560, 26)">
-    <rect width="256" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.08" stroke="#8B5CF6" stroke-opacity="0.3" stroke-width="1"/>
-    <circle cx="13" cy="12" r="4" fill="#A855F7"/>
-    <text x="25" y="15.5" class="mono" font-size="11px" font-weight="600" letter-spacing="0.6px" fill="#C084FC">PRESIDENCY UNIV. • 2025–2029</text>
+  <g transform="translate(640, 24)">
+    <rect width="225" height="24" rx="12" fill="#7209B7" fill-opacity="0.2" stroke="#9D4EDD" stroke-opacity="0.6" stroke-width="1"/>
+    <text x="14" y="15.5" class="mono" font-size="10.5px" font-weight="700" letter-spacing="0.8px" fill="#E0AAFF">PRESIDENCY UNIV &bull; 2025–2029</text>
   </g>
 
-  <!-- Hero Name -->
-  <text x="34" y="96" class="sans title">SHAIK IRFAN</text>
+  <!-- Hero Identity -->
+  <text x="35" y="96" class="strange-title" font-size="34" filter="url(#glow)">SHAIK IRFAN</text>
 
-  <!-- Primary Subtitle -->
-  <text x="34" y="128" class="sans subhead">
-    Applied AI Engineering <tspan fill="#00F0FF">|</tspan> RAG Systems <tspan fill="#8B5CF6">|</tspan> Intelligent Software Systems
+  <!-- Tagline -->
+  <text x="36" y="125" class="subtext">
+    <tspan fill="#FF9E00" font-weight="700">&#x27E1; Applied AI Sorcerer</tspan>
+    <tspan fill="#64748B"> &bull; </tspan>
+    <tspan fill="#F8FAFC">Deterministic RAG &amp; Intelligent Software Architectures</tspan>
   </text>
 
-  <!-- Horizontal Divider Line -->
-  <line x1="34" y1="148" x2="816" y2="148" stroke="#1E293B" stroke-width="1"/>
-  <line x1="34" y1="148" x2="210" y2="148" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.8"/>
+  <!-- Eldritch Particle Sparks Line -->
+  <line x1="36" y1="148" x2="570" y2="148" stroke="#332050" stroke-width="1"/>
+  <line x1="36" y1="148" x2="260" y2="148" stroke="url(#eldritchGold)" stroke-width="2">
+    <animate attributeName="x2" values="120;340;120" dur="4s" repeatCount="indefinite"/>
+  </line>
 
-  <!-- Engineering Pillars / Telemetry Row -->
-  <g transform="translate(34, 164)">
+  <!-- Sorcerer Telemetry Bar -->
+  <g transform="translate(36, 166)">
     <!-- Column 1 -->
-    <text x="0" y="11" class="mono metric-label">ARCHITECTURE</text>
-    <text x="0" y="27" class="mono metric-val">Deterministic AI &amp; Logic</text>
+    <text x="0" y="12" class="hud-label">WARDING</text>
+    <text x="0" y="30" class="hud-val">&#x25C7; Zero LLM Hallucinations</text>
 
     <!-- Column 2 -->
-    <text x="250" y="11" class="mono metric-label">PRIVACY &amp; SECURITY</text>
-    <text x="250" y="27" class="mono metric-val">On-Device Context Redaction</text>
+    <text x="210" y="12" class="hud-label">DIMENSIONAL BARRIER</text>
+    <text x="210" y="30" class="hud-val">&#x25C7; On-Device Privacy Vaults</text>
 
     <!-- Column 3 -->
-    <text x="520" y="11" class="mono metric-label">KNOWLEDGE ASSISTANCE</text>
-    <text x="520" y="27" class="mono metric-val">Grounded RAG &amp; Vector Indexing</text>
+    <text x="430" y="12" class="hud-label">KNOWLEDGE CODEX</text>
+    <text x="430" y="30" class="hud-val">&#x25C7; Grounded Vector Retrievability</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- DOCTOR STRANGE TAO MANDALA (ANIMATED ROTATING SPELL CIRCLE)      -->
+  <!-- Center: cx="740", cy="125"                                       -->
+  <!-- ================================================================= -->
+  <g transform="translate(740, 125)">
+    <!-- Outer Eldritch Ring: Rotates Clockwise -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="76" stroke="#FF9E00" stroke-width="1.8" stroke-dasharray="14 8 26 6 6 6" stroke-opacity="0.9"/>
+      <circle cx="0" cy="0" r="82" stroke="#FF5400" stroke-width="1" stroke-dasharray="3 7 12 5" stroke-opacity="0.6"/>
+      
+      <!-- Runes on the Outer Ring -->
+      <circle cx="0" cy="-76" r="3.5" fill="#FFD000"/>
+      <circle cx="76" cy="0" r="3.5" fill="#FFD000"/>
+      <circle cx="0" cy="76" r="3.5" fill="#FFD000"/>
+      <circle cx="-76" cy="0" r="3.5" fill="#FFD000"/>
+      <circle cx="53.7" cy="53.7" r="2.5" fill="#FF5400"/>
+      <circle cx="-53.7" cy="-53.7" r="2.5" fill="#FF5400"/>
+      <circle cx="53.7" cy="-53.7" r="2.5" fill="#FF5400"/>
+      <circle cx="-53.7" cy="53.7" r="2.5" fill="#FF5400"/>
+    </g>
+
+    <!-- Middle Octagram Ring: Rotates Counter-Clockwise -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="62" stroke="#FFD000" stroke-width="1.4" stroke-dasharray="6 4"/>
+      
+      <!-- Overlapping Intersecting Sacred Geometry Squares (Doctor Strange Shield) -->
+      <rect x="-42" y="-42" width="84" height="84" fill="none" stroke="#FF9E00" stroke-width="1.2" stroke-opacity="0.75"/>
+      <rect x="-42" y="-42" width="84" height="84" fill="none" stroke="#FF5400" stroke-width="1.2" stroke-opacity="0.75" transform="rotate(45)"/>
+      <rect x="-42" y="-42" width="84" height="84" fill="none" stroke="#FB8500" stroke-width="0.8" stroke-opacity="0.5" transform="rotate(22.5)"/>
+      <rect x="-42" y="-42" width="84" height="84" fill="none" stroke="#FB8500" stroke-width="0.8" stroke-opacity="0.5" transform="rotate(67.5)"/>
+    </g>
+
+    <!-- Inner Mystic Circle: Rotates Clockwise Fast -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="38" stroke="#00F5D4" stroke-width="1.5" stroke-dasharray="8 6 16 4" stroke-opacity="0.85"/>
+      <polygon points="0,-36 31.1,18 -31.1,18" fill="none" stroke="#FFD000" stroke-width="1.2" stroke-opacity="0.8"/>
+      <polygon points="0,36 31.1,-18 -31.1,-18" fill="none" stroke="#FF9E00" stroke-width="1.2" stroke-opacity="0.8"/>
+    </g>
+
+    <!-- Center: Eye of Agamotto Cosmic Core -->
+    <g>
+      <!-- Pulsing Mystic Iris -->
+      <circle cx="0" cy="0" r="18" fill="#0E0B1A" stroke="#00F5D4" stroke-width="2">
+        <animate attributeName="stroke-width" values="1.5;3;1.5" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M -16 0 Q 0 -11 16 0 Q 0 11 -16 0 Z" fill="none" stroke="#FFB703" stroke-width="1.5"/>
+      <!-- Glowing Emerald Time Stone Core -->
+      <circle cx="0" cy="0" r="6" fill="#00F5D4" filter="url(#glow)">
+        <animate attributeName="r" values="5;7.5;5" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="fill" values="#00F5D4;#FFD000;#00F5D4" dur="5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Floating Spark Particles around Mandala -->
+    <circle cx="70" cy="-35" r="1.5" fill="#FFD000">
+      <animate attributeName="cy" values="-35;-50;-35" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-65" cy="45" r="1.8" fill="#FF5400">
+      <animate attributeName="cx" values="-65;-75;-65" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.1;0.9" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="70" r="1.2" fill="#00F5D4">
+      <animate attributeName="cy" values="70;82;70" dur="2s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
