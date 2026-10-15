@@ -30,6 +30,17 @@
   <img src="./assets/snake-game.svg" alt="Doctor Strange Quantum Snake Game &bull; Eating Reality Energy Orbs" width="100%" />
 </a>
 
+<br/><br/>
+
+<!-- Real GitHub Contribution Graph Snake (Generated live via GitHub Actions) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/github-contribution-grid-snake.svg">
+  <img alt="Shaik Irfan's GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/github-contribution-grid-snake-dark.svg" width="100%">
+</picture>
+
+<br/>
+
 <sub><em>⚡ Autonomous quantum serpent navigating the mystic grid, consuming anomaly dots to stabilize timeline entropy.</em></sub>
 
 <br/>
