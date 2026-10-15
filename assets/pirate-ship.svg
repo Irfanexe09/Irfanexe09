@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150" width="100%" height="150" fill="none">
+  <defs>
+    <!-- Deep Ocean Backdrop -->
+    <linearGradient id="oceanNight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#071116"/>
+      <stop offset="60%" stop-color="#0B1922"/>
+      <stop offset="100%" stop-color="#050C10"/>
+    </linearGradient>
+
+    <!-- Wave Crest Gradient -->
+    <linearGradient id="waveTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D6465" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#2A8384" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1D6465" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Hull Wood Gradient -->
+    <linearGradient id="shipWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A3A2B"/>
+      <stop offset="50%" stop-color="#422B20"/>
+      <stop offset="100%" stop-color="#2A1B14"/>
+    </linearGradient>
+
+    <!-- Sail Parchment Gradient -->
+    <linearGradient id="sailFabric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5EBD5"/>
+      <stop offset="60%" stop-color="#E8D8B5"/>
+      <stop offset="100%" stop-color="#CBB78C"/>
+    </linearGradient>
+
+    <!-- Stern Lantern Glow Filter -->
+    <filter id="sternGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .chart-label { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Courier New", monospace; font-size: 9.5px; letter-spacing: 1.5px; fill: #D6AD60; }
+  </style>
+
+  <!-- Sky & Ocean Boundary -->
+  <rect width="896" height="146" x="2" y="2" rx="10" fill="url(#oceanNight)" stroke="#422B20" stroke-width="1.2"/>
+
+  <!-- Distant Starlight & Sea Mist -->
+  <g fill="#F5EBD5" opacity="0.4">
+    <circle cx="95" cy="22" r="0.8"/>
+    <circle cx="210" cy="18" r="1.2"/>
+    <circle cx="340" cy="28" r="0.7"/>
+    <circle cx="480" cy="15" r="1.4"/>
+    <circle cx="620" cy="24" r="0.8"/>
+    <circle cx="760" cy="19" r="1.1"/>
+    <circle cx="840" cy="32" r="0.9"/>
+  </g>
+
+  <!-- Nautical Chart Route Track (Dashed gold voyage route) -->
+  <path d="M 10 95 C 180 88 340 102 520 92 C 680 84 820 96 890 90"
+        fill="none" stroke="#D6AD60" stroke-width="1" stroke-dasharray="6 8" stroke-opacity="0.35"/>
+
+  <!-- Waypoint Markers along the Voyage -->
+  <g transform="translate(180, 88)">
+    <circle cx="0" cy="0" r="2.5" fill="#D6AD60" opacity="0.6"/>
+    <text x="0" y="-10" text-anchor="middle" class="chart-label" font-size="8" fill="#D6AD60" opacity="0.6">PORT I</text>
+  </g>
+  <g transform="translate(380, 98)">
+    <circle cx="0" cy="0" r="2.5" fill="#D6AD60" opacity="0.6"/>
+    <text x="0" y="-10" text-anchor="middle" class="chart-label" font-size="8" fill="#D6AD60" opacity="0.6">PORT II</text>
+  </g>
+  <g transform="translate(580, 90)">
+    <circle cx="0" cy="0" r="2.5" fill="#D6AD60" opacity="0.6"/>
+    <text x="0" y="-10" text-anchor="middle" class="chart-label" font-size="8" fill="#D6AD60" opacity="0.6">PORT III</text>
+  </g>
+  <g transform="translate(760, 93)">
+    <circle cx="0" cy="0" r="2.5" fill="#D6AD60" opacity="0.6"/>
+    <text x="0" y="-10" text-anchor="middle" class="chart-label" font-size="8" fill="#D6AD60" opacity="0.6">PORT IV</text>
+  </g>
+
+  <!-- Background Rolling Sea Wave Layer -->
+  <path d="M 0 108 C 60 104 120 114 180 108 C 240 102 300 112 360 107 C 420 102 480 113 540 108 C 600 103 660 114 720 108 C 780 102 840 112 900 108 L 900 148 L 0 148 Z"
+        fill="#071116" fill-opacity="0.7"/>
+
+  <!-- Middle Rolling Ocean Swell (Animated subtle wave drift) -->
+  <path d="M 0 118 C 75 112 150 124 225 118 C 300 112 375 124 450 118 C 525 112 600 124 675 118 C 750 112 825 124 900 118 L 900 148 L 0 148 Z"
+        fill="#0B1922" stroke="url(#waveTeal)" stroke-width="1.2">
+    <animate attributeName="d"
+             values="M 0 118 C 75 112 150 124 225 118 C 300 112 375 124 450 118 C 525 112 600 124 675 118 C 750 112 825 124 900 118 L 900 148 L 0 148 Z;
+                     M 0 118 C 75 124 150 112 225 118 C 300 124 375 112 450 118 C 525 124 600 112 675 118 C 750 124 825 112 900 118 L 900 148 L 0 148 Z;
+                     M 0 118 C 75 112 150 124 225 118 C 300 112 375 124 450 118 C 525 112 600 124 675 118 C 750 112 825 124 900 118 L 900 148 L 0 148 Z"
+             dur="7s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- ================================================================= -->
+  <!-- THE PIRATE SHIP (SAILING SMOOTHLY ALONG THE NAUTICAL ROUTE)       -->
+  <!-- ================================================================= -->
+  <g>
+    <!-- Motion Along Chart Route -->
+    <animateMotion path="M -80 92 C 160 86 340 102 520 92 C 680 84 840 96 980 90"
+                   dur="26s"
+                   repeatCount="indefinite"/>
+
+    <!-- Gentle Buoyant Pitch & Roll -->
+    <g>
+      <animateTransform attributeName="transform"
+                        type="rotate"
+                        values="-2 0 0; 2.5 0 0; -1.5 0 0; 2 0 0; -2 0 0"
+                        dur="3.8s"
+                        repeatCount="indefinite"/>
+
+      <!-- Water Foam Wake Ripple behind Stern -->
+      <ellipse cx="-28" cy="10" rx="14" ry="2.5" fill="#E8D8B5" opacity="0.3">
+        <animate attributeName="rx" values="10;20;10" dur="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="1.8s" repeatCount="indefinite"/>
+      </ellipse>
+
+      <!-- Ship Hull (Wooden Galleon with Gunports & Bowsprit) -->
+      <path d="M -26 -2 L -20 8 Q 0 13 22 8 L 32 -1 Q 12 1 -26 -2 Z"
+            fill="url(#shipWood)" stroke="#1A110D" stroke-width="1"/>
+      <!-- Gold Hull Trim Stripe -->
+      <path d="M -22 1 Q 0 4 24 1" fill="none" stroke="#D6AD60" stroke-width="1"/>
+      <!-- Bowsprit Mast Pole pointing forward -->
+      <line x1="28" y1="-1" x2="42" y2="-7" stroke="#422B20" stroke-width="1.6"/>
+
+      <!-- Three Masts -->
+      <!-- Foremast (Front) -->
+      <line x1="16" y1="2" x2="16" y2="-32" stroke="#2D1D16" stroke-width="1.6"/>
+      <!-- Mainmast (Tall Center) -->
+      <line x1="2" y1="3" x2="2" y2="-44" stroke="#2D1D16" stroke-width="2"/>
+      <!-- Mizzenmast (Aft/Back) -->
+      <line x1="-12" y1="1" x2="-12" y2="-30" stroke="#2D1D16" stroke-width="1.6"/>
+
+      <!-- Billowing Sails (Parchment Fabric) -->
+      <!-- Main Course Sail (Lower) -->
+      <path d="M -8 -12 Q 2 -8 12 -12 Q 9 -26 2 -25 Q -5 -26 -8 -12 Z"
+            fill="url(#sailFabric)" stroke="#8C7350" stroke-width="0.8"/>
+      <!-- Main Topsail (Upper) -->
+      <path d="M -6 -28 Q 2 -25 10 -28 Q 7 -39 2 -38 Q -3 -39 -6 -28 Z"
+            fill="url(#sailFabric)" stroke="#8C7350" stroke-width="0.8"/>
+      <!-- Foremast Sail -->
+      <path d="M 8 -9 Q 16 -6 24 -9 Q 21 -22 16 -21 Q 11 -22 8 -9 Z"
+            fill="url(#sailFabric)" stroke="#8C7350" stroke-width="0.75"/>
+      <!-- Mizzen Lateen Sail (Triangular aft sail) -->
+      <path d="M -13 -6 L -13 -25 L -25 -10 Z"
+            fill="url(#sailFabric)" stroke="#8C7350" stroke-width="0.75"/>
+
+      <!-- Pirate Flag / Pennant Fluttering at Mainmast -->
+      <path d="M 2 -44 L -9 -41 L 2 -38 Z" fill="#071116">
+        <animate attributeName="d"
+                 values="M 2 -44 L -9 -41 L 2 -38 Z; M 2 -44 L -11 -40 L 2 -38 Z; M 2 -44 L -9 -41 L 2 -38 Z"
+                 dur="1.2s" repeatCount="indefinite"/>
+      </path>
+      <!-- Small Gold Emblem on Flag -->
+      <circle cx="-3" cy="-41" r="1.2" fill="#D6AD60"/>
+
+      <!-- Stern Cabin Lantern (Flickering Warm Antique Light) -->
+      <circle cx="-25" cy="-2" r="2.5" fill="#D6AD60" filter="url(#sternGlow)">
+        <animate attributeName="r" values="2;3.2;2" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Foreground Ocean Foam Crest (Soft wave lap over the lower hull) -->
+  <path d="M 0 128 C 80 124 160 134 240 129 C 320 124 400 133 480 128 C 560 123 640 134 720 129 C 800 124 880 133 900 130 L 900 148 L 0 148 Z"
+        fill="#071116"/>
+
+  <!-- Voyage Expedition Legend (Bottom Left) -->
+  <g transform="translate(24, 138)">
+    <text x="0" y="0" class="chart-label">&#x2693; VOYAGE OF IRFAN.EXE &#x2022; EXPEDITION ARCHIVE &#x2022; EXPLORING UNCHARTED CODEBASES</text>
+  </g>
+</svg>

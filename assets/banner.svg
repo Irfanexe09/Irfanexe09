@@ -1,54 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="100%" height="230" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" width="100%" height="220" fill="none">
   <defs>
-    <!-- Deep Cosmic Obsidian & Astral Gradient -->
-    <linearGradient id="cosmicVoid" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08070E"/>
-      <stop offset="45%" stop-color="#0E0B1A"/>
-      <stop offset="85%" stop-color="#140C24"/>
-      <stop offset="100%" stop-color="#1F0D15"/>
+    <!-- Deep Ocean & Nautical Gradients -->
+    <linearGradient id="oceanDeep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071116"/>
+      <stop offset="50%" stop-color="#0B1922"/>
+      <stop offset="100%" stop-color="#09141B"/>
     </linearGradient>
 
-    <!-- Eldritch Fiery Spark Gradient -->
-    <linearGradient id="eldritchGold" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF5400"/>
-      <stop offset="35%" stop-color="#FF9E00"/>
-      <stop offset="70%" stop-color="#FFD000"/>
-      <stop offset="100%" stop-color="#FF5400"/>
+    <!-- Antique Gold Gradient -->
+    <linearGradient id="antiqueGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9C7A3C"/>
+      <stop offset="30%" stop-color="#D6AD60"/>
+      <stop offset="70%" stop-color="#F5EBD5"/>
+      <stop offset="100%" stop-color="#C59B46"/>
     </linearGradient>
 
-    <!-- Agamotto Time Stone Astral Glow -->
-    <linearGradient id="timeStone" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F5D4"/>
-      <stop offset="50%" stop-color="#00BBF9"/>
-      <stop offset="100%" stop-color="#05FFA1"/>
+    <!-- Dark Wood Trim Gradient -->
+    <linearGradient id="darkWood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D1D16"/>
+      <stop offset="50%" stop-color="#422B20"/>
+      <stop offset="100%" stop-color="#261812"/>
     </linearGradient>
 
-    <!-- Border Radiant Sparks -->
-    <linearGradient id="sparksBorder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF9E00" stop-opacity="0.8"/>
-      <stop offset="25%" stop-color="#7209B7" stop-opacity="0.5"/>
-      <stop offset="50%" stop-color="#00F5D4" stop-opacity="0.7"/>
-      <stop offset="75%" stop-color="#FF5400" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#FFD000" stop-opacity="0.9"/>
+    <!-- Border Glow -->
+    <linearGradient id="borderGild" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D6AD60" stop-opacity="0.8"/>
+      <stop offset="35%" stop-color="#422B20" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#1D6465" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D6AD60" stop-opacity="0.8"/>
     </linearGradient>
 
-    <!-- Radial Tao Mandala Center Glow -->
-    <radialGradient id="mandalaCore" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFD000" stop-opacity="0.6"/>
-      <stop offset="35%" stop-color="#FF7A00" stop-opacity="0.3"/>
-      <stop offset="70%" stop-color="#7209B7" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#08070E" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Background Grid Pattern -->
-    <pattern id="astralGrid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#2D1B4E" stroke-width="0.6" stroke-opacity="0.35"/>
-      <circle cx="28" cy="28" r="0.8" fill="#FF9E00" fill-opacity="0.4"/>
+    <!-- Nautical Chart Grid Pattern -->
+    <pattern id="chartGrid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#1D6465" stroke-width="0.5" stroke-opacity="0.25"/>
+      <circle cx="36" cy="36" r="0.75" fill="#D6AD60" fill-opacity="0.3"/>
     </pattern>
 
-    <!-- Filter for Eldritch Sparks Glow -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+    <!-- Lantern Glow Filter -->
+    <filter id="lanternGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -57,137 +47,136 @@
   </defs>
 
   <style>
-    .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
-    .strange-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 900; letter-spacing: 2.5px; fill: #FFF7ED; }
-    .rune-text { font-family: ui-monospace, "Courier New", monospace; font-size: 8.5px; letter-spacing: 1.5px; fill: #FFB703; font-weight: bold; }
-    .subtext { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13.5px; font-weight: 500; fill: #CBD5E1; }
-    .hud-label { font-family: ui-monospace, monospace; font-size: 10px; font-weight: 700; letter-spacing: 1px; fill: #FB8500; }
-    .hud-val { font-family: ui-monospace, monospace; font-size: 11.5px; font-weight: 600; fill: #E2E8F0; }
+    .pirate-serif { font-family: "Georgia", "Palatino", "Times New Roman", serif; font-weight: 700; letter-spacing: 2px; fill: #F5EBD5; }
+    .parchment-mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Courier New", monospace; }
+    .gold-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; fill: #D6AD60; }
+    .parchment-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13.5px; font-weight: 500; fill: #E8D8B5; }
+    .coord-val { font-size: 11.5px; font-weight: 600; fill: #C9B896; }
   </style>
 
-  <!-- Base Canvas -->
-  <rect width="898" height="228" x="1" y="1" rx="14" fill="url(#cosmicVoid)" stroke="url(#sparksBorder)" stroke-width="1.8"/>
-  <rect width="898" height="228" x="1" y="1" rx="14" fill="url(#astralGrid)"/>
+  <!-- Outer Wooden & Gold Container -->
+  <rect width="876" height="216" x="2" y="2" rx="10" fill="url(#oceanDeep)" stroke="url(#borderGild)" stroke-width="2"/>
+  <rect width="864" height="204" x="8" y="8" rx="8" fill="none" stroke="#D6AD60" stroke-width="0.75" stroke-opacity="0.4" stroke-dasharray="8 4"/>
 
-  <!-- Mystic Spark Ambience (Left & Right) -->
-  <circle cx="730" cy="115" r="150" fill="url(#mandalaCore)"/>
-  <circle cx="80" cy="30" r="100" fill="#FF5400" fill-opacity="0.06"/>
-  <circle cx="450" cy="200" r="120" fill="#7209B7" fill-opacity="0.08"/>
+  <!-- Chart Grid Overlay -->
+  <rect width="860" height="200" x="10" y="10" rx="7" fill="url(#chartGrid)"/>
 
-  <!-- Top HUD Status Ribbon -->
-  <g transform="translate(35, 24)">
-    <rect width="320" height="24" rx="12" fill="#FF5400" fill-opacity="0.12" stroke="#FF9E00" stroke-opacity="0.5" stroke-width="1"/>
-    <!-- Pulsing Time Stone Eye Dot -->
-    <circle cx="14" cy="12" r="4.5" fill="#00F5D4">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="4;5.5;4" dur="2s" repeatCount="indefinite"/>
+  <!-- Corner Brass Rivets -->
+  <circle cx="16" cy="16" r="3" fill="#D6AD60" stroke="#422B20" stroke-width="0.75"/>
+  <circle cx="864" cy="16" r="3" fill="#D6AD60" stroke="#422B20" stroke-width="0.75"/>
+  <circle cx="16" cy="204" r="3" fill="#D6AD60" stroke="#422B20" stroke-width="0.75"/>
+  <circle cx="864" cy="204" r="3" fill="#D6AD60" stroke="#422B20" stroke-width="0.75"/>
+
+  <!-- Top Ribbon: Captain's Dispatch -->
+  <g transform="translate(36, 26)">
+    <rect width="330" height="24" rx="12" fill="#0B1922" stroke="#D6AD60" stroke-width="1" stroke-opacity="0.6"/>
+    <!-- Glowing Stern Lantern Indicator -->
+    <circle cx="14" cy="12" r="4.5" fill="#D6AD60" filter="url(#lanternGlow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="4;5;4" dur="2.4s" repeatCount="indefinite"/>
     </circle>
-    <text x="28" y="15.5" class="mono" font-size="10.5px" font-weight="700" letter-spacing="1px" fill="#FFB703">SANCTUM OF INTELLIGENCE &#x2022; ONLINE</text>
+    <text x="28" y="15.5" class="parchment-mono" font-size="10px" font-weight="700" letter-spacing="1.2px" fill="#D6AD60">CAPTAIN&#x27;S LOG &#x2022; IRFAN.EXE ARCHIVE</text>
   </g>
 
-  <g transform="translate(640, 24)">
-    <rect width="225" height="24" rx="12" fill="#7209B7" fill-opacity="0.2" stroke="#9D4EDD" stroke-opacity="0.6" stroke-width="1"/>
-    <text x="14" y="15.5" class="mono" font-size="10.5px" font-weight="700" letter-spacing="0.8px" fill="#E0AAFF">PRESIDENCY UNIV &#x2022; 2025–2029</text>
+  <!-- Coordinates & Academic Base (Top Right) -->
+  <g transform="translate(585, 26)">
+    <rect width="255" height="24" rx="12" fill="#0B1922" stroke="#1D6465" stroke-width="1" stroke-opacity="0.7"/>
+    <text x="14" y="15.5" class="parchment-mono" font-size="10px" font-weight="700" letter-spacing="0.8px" fill="#E8D8B5">PRESIDENCY UNIV &#x2022; 2025–2029</text>
   </g>
 
-  <!-- Hero Identity -->
-  <text x="35" y="96" class="strange-title" font-size="34" filter="url(#glow)">SHAIK IRFAN</text>
+  <!-- Main Hero Titles -->
+  <text x="36" y="92" class="pirate-serif" font-size="32">SHAIK IRFAN</text>
+  <text x="36" y="116" class="parchment-mono gold-label" font-size="11.5">THE DEVELOPER BEHIND THE TREASURE</text>
 
-  <!-- Tagline -->
-  <text x="36" y="125" class="subtext">
-    <tspan fill="#FF9E00" font-weight="700">&#x27E1; Applied AI Sorcerer</tspan>
-    <tspan fill="#64748B"> &#x2022; </tspan>
-    <tspan fill="#F8FAFC">Deterministic RAG &amp; Intelligent Software Architectures</tspan>
+  <!-- Voyage Tagline -->
+  <text x="36" y="142" class="parchment-sub">
+    Computer Science Student &amp; AI Engineer &#x2022; Architecting Verifiable Software &amp; Intelligent Systems
   </text>
 
-  <!-- Eldritch Particle Sparks Line -->
-  <line x1="36" y1="148" x2="570" y2="148" stroke="#332050" stroke-width="1"/>
-  <line x1="36" y1="148" x2="260" y2="148" stroke="url(#eldritchGold)" stroke-width="2">
-    <animate attributeName="x2" values="120;340;120" dur="4s" repeatCount="indefinite"/>
-  </line>
+  <!-- Gold Inlay Separator Line -->
+  <line x1="36" y1="156" x2="570" y2="156" stroke="#422B20" stroke-width="1.2"/>
+  <line x1="36" y1="156" x2="220" y2="156" stroke="url(#antiqueGold)" stroke-width="1.6"/>
 
-  <!-- Sorcerer Telemetry Bar -->
-  <g transform="translate(36, 166)">
+  <!-- Ship's Telemetry & Sea Manifest -->
+  <g transform="translate(36, 172)">
     <!-- Column 1 -->
-    <text x="0" y="12" class="hud-label">WARDING</text>
-    <text x="0" y="30" class="hud-val">&#x25C7; Zero LLM Hallucinations</text>
+    <text x="0" y="10" class="parchment-mono gold-label">SECTOR</text>
+    <text x="0" y="26" class="parchment-mono coord-val">&#x2693; Bengaluru &#x2022; 13&#xB0;09&#x27;N, 77&#xB0;34&#x27;E</text>
 
     <!-- Column 2 -->
-    <text x="210" y="12" class="hud-label">DIMENSIONAL BARRIER</text>
-    <text x="210" y="30" class="hud-val">&#x25C7; On-Device Privacy Vaults</text>
+    <text x="210" y="10" class="parchment-mono gold-label">CARGO DISCIPLINE</text>
+    <text x="210" y="26" class="parchment-mono coord-val">&#x2747; Deterministic RAG &amp; Applied AI</text>
 
     <!-- Column 3 -->
-    <text x="430" y="12" class="hud-label">KNOWLEDGE CODEX</text>
-    <text x="430" y="30" class="hud-val">&#x25C7; Grounded Vector Retrievability</text>
+    <text x="430" y="10" class="parchment-mono gold-label">EXPEDITION STATUS</text>
+    <text x="430" y="26" class="parchment-mono coord-val">&#x2694; Unlocking Summer 2027 Internships</text>
   </g>
 
   <!-- ================================================================= -->
-  <!-- DOCTOR STRANGE TAO MANDALA (ANIMATED ROTATING SPELL CIRCLE)      -->
-  <!-- Center: cx="740", cy="125"                                       -->
+  <!-- VINTAGE BRASS COMPASS ROSE & ASTROLABE (ANIMATED ROTATING EMBLEM) -->
+  <!-- Center: cx="735", cy="120"                                        -->
   <!-- ================================================================= -->
-  <g transform="translate(740, 125)">
-    <!-- Outer Eldritch Ring: Rotates Clockwise -->
+  <g transform="translate(735, 120)">
+    <!-- Ambient Ocean Backlight Glow -->
+    <circle cx="0" cy="0" r="70" fill="#1D6465" fill-opacity="0.18"/>
+
+    <!-- Outer Degree Ring (Rotates Slow Clockwise like an Astrolabe) -->
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
-      <circle cx="0" cy="0" r="76" stroke="#FF9E00" stroke-width="1.8" stroke-dasharray="14 8 26 6 6 6" stroke-opacity="0.9"/>
-      <circle cx="0" cy="0" r="82" stroke="#FF5400" stroke-width="1" stroke-dasharray="3 7 12 5" stroke-opacity="0.6"/>
-      
-      <!-- Runes on the Outer Ring -->
-      <circle cx="0" cy="-76" r="3.5" fill="#FFD000"/>
-      <circle cx="76" cy="0" r="3.5" fill="#FFD000"/>
-      <circle cx="0" cy="76" r="3.5" fill="#FFD000"/>
-      <circle cx="-76" cy="0" r="3.5" fill="#FFD000"/>
-      <circle cx="53.7" cy="53.7" r="2.5" fill="#FF5400"/>
-      <circle cx="-53.7" cy="-53.7" r="2.5" fill="#FF5400"/>
-      <circle cx="53.7" cy="-53.7" r="2.5" fill="#FF5400"/>
-      <circle cx="-53.7" cy="53.7" r="2.5" fill="#FF5400"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="40s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="66" stroke="#D6AD60" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <circle cx="0" cy="0" r="72" stroke="#422B20" stroke-width="1"/>
+      <circle cx="0" cy="0" r="58" stroke="#D6AD60" stroke-width="0.75" stroke-opacity="0.6"/>
+
+      <!-- Degree Ticks -->
+      <line x1="0" y1="-66" x2="0" y2="-58" stroke="#D6AD60" stroke-width="1.5"/>
+      <line x1="66" y1="0" x2="58" y2="0" stroke="#D6AD60" stroke-width="1.5"/>
+      <line x1="0" y1="66" x2="0" y2="58" stroke="#D6AD60" stroke-width="1.5"/>
+      <line x1="-66" y1="0" x2="-58" y2="0" stroke="#D6AD60" stroke-width="1.5"/>
+      <line x1="46.6" y1="-46.6" x2="41" y2="-41" stroke="#D6AD60" stroke-width="1"/>
+      <line x1="-46.6" y1="-46.6" x2="-41" y2="-41" stroke="#D6AD60" stroke-width="1"/>
+      <line x1="46.6" y1="46.6" x2="41" y2="41" stroke="#D6AD60" stroke-width="1"/>
+      <line x1="-46.6" y1="46.6" x2="-41" y2="41" stroke="#D6AD60" stroke-width="1"/>
     </g>
 
-    <!-- Middle Octagram Ring: Rotates Counter-Clockwise -->
+    <!-- 8-Point Compass Rose (Inner Star) -->
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite"/>
-      <circle cx="0" cy="0" r="62" stroke="#FFD000" stroke-width="1.4" stroke-dasharray="6 4"/>
-      
-      <!-- Overlapping Intersecting Sacred Geometry Squares (Doctor Strange Shield) -->
-      <rect x="-42" y="-42" width="84" height="84" fill="none" stroke="#FF9E00" stroke-width="1.2" stroke-opacity="0.75"/>
-      <rect x="-42" y="-42" width="84" height="84" fill="none" stroke="#FF5400" stroke-width="1.2" stroke-opacity="0.75" transform="rotate(45)"/>
-      <rect x="-42" y="-42" width="84" height="84" fill="none" stroke="#FB8500" stroke-width="0.8" stroke-opacity="0.5" transform="rotate(22.5)"/>
-      <rect x="-42" y="-42" width="84" height="84" fill="none" stroke="#FB8500" stroke-width="0.8" stroke-opacity="0.5" transform="rotate(67.5)"/>
+      <!-- North Pointer (Gold & Dark Shading) -->
+      <polygon points="0,0 -8,-22 0,-52" fill="#D6AD60"/>
+      <polygon points="0,0 8,-22 0,-52" fill="#8C6A2E"/>
+
+      <!-- South Pointer -->
+      <polygon points="0,0 -8,22 0,52" fill="#8C6A2E"/>
+      <polygon points="0,0 8,22 0,52" fill="#D6AD60"/>
+
+      <!-- East Pointer -->
+      <polygon points="0,0 22,-8 52,0" fill="#D6AD60"/>
+      <polygon points="0,0 22,8 52,0" fill="#8C6A2E"/>
+
+      <!-- West Pointer -->
+      <polygon points="0,0 -22,-8 -52,0" fill="#8C6A2E"/>
+      <polygon points="0,0 -22,8 -52,0" fill="#D6AD60"/>
+
+      <!-- 4 Diagonal Small Pointers -->
+      <g transform="rotate(45)">
+        <polygon points="0,0 -5,-16 0,-36" fill="#C59B46"/>
+        <polygon points="0,0 5,-16 0,-36" fill="#6A4E20"/>
+        <polygon points="0,0 -5,16 0,36" fill="#6A4E20"/>
+        <polygon points="0,0 5,16 0,36" fill="#C59B46"/>
+        <polygon points="0,0 16,-5 36,0" fill="#C59B46"/>
+        <polygon points="0,0 16,5 36,0" fill="#6A4E20"/>
+        <polygon points="0,0 -16,-5 -36,0" fill="#6A4E20"/>
+        <polygon points="0,0 -16,5 -36,0" fill="#C59B46"/>
+      </g>
     </g>
 
-    <!-- Inner Mystic Circle: Rotates Clockwise Fast -->
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
-      <circle cx="0" cy="0" r="38" stroke="#00F5D4" stroke-width="1.5" stroke-dasharray="8 6 16 4" stroke-opacity="0.85"/>
-      <polygon points="0,-36 31.1,18 -31.1,18" fill="none" stroke="#FFD000" stroke-width="1.2" stroke-opacity="0.8"/>
-      <polygon points="0,36 31.1,-18 -31.1,-18" fill="none" stroke="#FF9E00" stroke-width="1.2" stroke-opacity="0.8"/>
-    </g>
+    <!-- Center Brass Pivot Pin -->
+    <circle cx="0" cy="0" r="7" fill="#422B20" stroke="#D6AD60" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="#D6AD60"/>
 
-    <!-- Center: Eye of Agamotto Cosmic Core -->
-    <g>
-      <!-- Pulsing Mystic Iris -->
-      <circle cx="0" cy="0" r="18" fill="#0E0B1A" stroke="#00F5D4" stroke-width="2">
-        <animate attributeName="stroke-width" values="1.5;3;1.5" dur="3s" repeatCount="indefinite"/>
-      </circle>
-      <path d="M -16 0 Q 0 -11 16 0 Q 0 11 -16 0 Z" fill="none" stroke="#FFB703" stroke-width="1.5"/>
-      <!-- Glowing Emerald Time Stone Core -->
-      <circle cx="0" cy="0" r="6" fill="#00F5D4" filter="url(#glow)">
-        <animate attributeName="r" values="5;7.5;5" dur="2s" repeatCount="indefinite"/>
-        <animate attributeName="fill" values="#00F5D4;#FFD000;#00F5D4" dur="5s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-
-    <!-- Floating Spark Particles around Mandala -->
-    <circle cx="70" cy="-35" r="1.5" fill="#FFD000">
-      <animate attributeName="cy" values="-35;-50;-35" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="-65" cy="45" r="1.8" fill="#FF5400">
-      <animate attributeName="cx" values="-65;-75;-65" dur="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.9;0.1;0.9" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="30" cy="70" r="1.2" fill="#00F5D4">
-      <animate attributeName="cy" values="70;82;70" dur="2s" repeatCount="indefinite"/>
-    </circle>
+    <!-- Cardinal Direction Labels -->
+    <text x="0" y="-72" text-anchor="middle" class="parchment-mono" font-size="9" font-weight="800" fill="#D6AD60">N</text>
+    <text x="80" y="3" text-anchor="middle" class="parchment-mono" font-size="9" font-weight="800" fill="#D6AD60">E</text>
+    <text x="0" y="80" text-anchor="middle" class="parchment-mono" font-size="9" font-weight="800" fill="#D6AD60">S</text>
+    <text x="-80" y="3" text-anchor="middle" class="parchment-mono" font-size="9" font-weight="800" fill="#D6AD60">W</text>
   </g>
 </svg>
