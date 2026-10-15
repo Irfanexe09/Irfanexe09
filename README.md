@@ -2,7 +2,7 @@
 
 <!-- Doctor Strange Tao Mandala Animated Banner -->
 <a href="https://github.com/Irfanexe09">
-  <img src="./assets/banner.svg" alt="Shaik Irfan &bull; The Sanctum of Applied AI &bull; Doctor Strange Mystic Tech" width="100%" />
+  <img src="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/main/assets/banner.svg" alt="Shaik Irfan &bull; The Sanctum of Applied AI &bull; Doctor Strange Mystic Tech" width="100%" />
 </a>
 
 <br/><br/>
@@ -27,7 +27,7 @@
 ### 🕹️ The Agamotto Matrix &mdash; Quantum Snake Simulation
 
 <a href="https://github.com/Irfanexe09">
-  <img src="./assets/snake-game.svg" alt="Doctor Strange Quantum Snake Game &bull; Eating Reality Energy Orbs" width="100%" />
+  <img src="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/main/assets/snake-game.svg" alt="Doctor Strange Quantum Snake Game &bull; Eating Reality Energy Orbs" width="100%" />
 </a>
 
 <br/><br/>

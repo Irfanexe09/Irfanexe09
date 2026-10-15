@@ -206,7 +206,7 @@
 
     <!-- Footer Banner in Arena -->
     <text x="32" y="142" class="game-mono" font-size="9.5px" font-weight="600" fill="#64748B" letter-spacing="1.2px">
-      [ARROW KEYS // AUTONOMOUS RUNNER] &bull; FEEDING UPON REALITY PARTICLES &bull; AGAMOTTO CORE SYNCHRONIZED
+      [ARROW KEYS // AUTONOMOUS RUNNER] &#x2022; FEEDING UPON REALITY PARTICLES &#x2022; AGAMOTTO CORE SYNCHRONIZED
     </text>
   </g>
 </svg>

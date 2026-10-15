@@ -82,12 +82,12 @@
       <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
       <animate attributeName="r" values="4;5.5;4" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <text x="28" y="15.5" class="mono" font-size="10.5px" font-weight="700" letter-spacing="1px" fill="#FFB703">SANCTUM OF INTELLIGENCE &bull; ONLINE</text>
+    <text x="28" y="15.5" class="mono" font-size="10.5px" font-weight="700" letter-spacing="1px" fill="#FFB703">SANCTUM OF INTELLIGENCE &#x2022; ONLINE</text>
   </g>
 
   <g transform="translate(640, 24)">
     <rect width="225" height="24" rx="12" fill="#7209B7" fill-opacity="0.2" stroke="#9D4EDD" stroke-opacity="0.6" stroke-width="1"/>
-    <text x="14" y="15.5" class="mono" font-size="10.5px" font-weight="700" letter-spacing="0.8px" fill="#E0AAFF">PRESIDENCY UNIV &bull; 2025–2029</text>
+    <text x="14" y="15.5" class="mono" font-size="10.5px" font-weight="700" letter-spacing="0.8px" fill="#E0AAFF">PRESIDENCY UNIV &#x2022; 2025–2029</text>
   </g>
 
   <!-- Hero Identity -->
@@ -96,7 +96,7 @@
   <!-- Tagline -->
   <text x="36" y="125" class="subtext">
     <tspan fill="#FF9E00" font-weight="700">&#x27E1; Applied AI Sorcerer</tspan>
-    <tspan fill="#64748B"> &bull; </tspan>
+    <tspan fill="#64748B"> &#x2022; </tspan>
     <tspan fill="#F8FAFC">Deterministic RAG &amp; Intelligent Software Architectures</tspan>
   </text>
 
