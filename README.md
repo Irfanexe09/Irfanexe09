@@ -2,7 +2,7 @@
 
 <!-- Captain's Log Hero Banner -->
 <a href="https://github.com/Irfanexe09">
-  <img src="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/main/assets/banner.svg" alt="Shaik Irfan &bull; The Developer Behind The Treasure &bull; IRFAN.EXE" width="100%" />
+  <img src="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/main/assets/pirate-banner.svg?v=2" alt="Shaik Irfan &bull; The Developer Behind The Treasure &bull; IRFAN.EXE" width="100%" />
 </a>
 
 <br/><br/>
@@ -36,7 +36,7 @@
 <!-- ================================================================ -->
 
 <a href="https://github.com/Irfanexe09">
-  <img src="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/main/assets/pirate-ship.svg" alt="The Galleon IRFAN.EXE Sailing Across the Ocean Archive" width="100%" />
+  <img src="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/main/assets/pirate-ship.svg?v=2" alt="The Galleon IRFAN.EXE Sailing Across the Ocean Archive" width="100%" />
 </a>
 
 <sub><em>⚓ The Galleon <strong>IRFAN.EXE</strong> navigating through uncharted codebases and recovered treasures.</em></sub>
