@@ -27,6 +27,7 @@
 <code><a href="#-discovered-treasures-featured-projects">💎 DISCOVERIES</a></code> &bull;
 <code><a href="#-recovered-treasures--achievements">🏆 ACHIEVEMENTS</a></code> &bull;
 <code><a href="#-the-captains-arsenal-technical-stack">⚔️ TECHNICAL ARSENAL</a></code> &bull;
+<code><a href="#contribution-voyage">🏴‍☠️ CONTRIBUTION VOYAGE</a></code> &bull;
 <code><a href="#-contact-the-captain">🧭 CONTACT THE CAPTAIN</a></code>
 
 <br/><br/>
@@ -407,6 +408,44 @@ Technologies are organized by actual implementation status across my projects ve
 - **Deterministic AI Systems**: Designing reproducible evaluation frameworks (such as Golden Datasets and citation tracking) that prevent hallucination in real-world LLM pipelines.
 - **On-Device Edge ML**: Compiling quantized neural nets with ONNX Runtime to execute computer vision and token classification client-side via Web Workers and WebGPU.
 - **Containerization &amp; Deployment**: Deepening understanding of multi-stage Docker build caching, network isolation, and reverse proxying with Nginx.
+
+---
+
+<a id="contribution-voyage"></a>
+## 🏴‍☠️ THE CONTRIBUTION VOYAGE
+
+> *"Every commit is another mile across the ocean.<br/>
+> Every contribution adds another discovery to the map."*
+
+<div align="center">
+
+<a href="https://github.com/Irfanexe09">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/pirate-contribution-snake.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/pirate-contribution-snake.svg">
+    <img src="https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/main/assets/pirate-contribution-voyage.svg" alt="The Pirate's Contribution Voyage &bull; Irfanexe09 GitHub Contribution Snake" width="100%" />
+  </picture>
+</a>
+
+<sub><em>⚓ The mythical sea serpent navigating alongside the galleon <strong>IRFAN.EXE</strong> across charted GitHub contribution coordinates.</em></sub>
+
+<br/>
+
+<details>
+<summary>📜 <strong>Inspect Direct Snake Feeds &amp; Static Fallback</strong></summary>
+
+<br/>
+
+| Artifact | Stream Route | Format |
+| :--- | :--- | :--- |
+| **Pirate Treasure Voyage (Live)** | [`output/pirate-contribution-snake.svg`](https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/pirate-contribution-snake.svg) | Animated SVG (Custom Canvas) |
+| **Pirate Voyage (Static Fallback)** | [`output/pirate-contribution-snake-static.svg`](https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/pirate-contribution-snake-static.svg) | Static SVG |
+| **GitHub Dark Snake** | [`output/github-contribution-grid-snake-dark.svg`](https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/github-contribution-grid-snake-dark.svg) | Animated SVG |
+| **GitHub Standard Snake** | [`output/github-contribution-grid-snake.svg`](https://raw.githubusercontent.com/Irfanexe09/Irfanexe09/output/github-contribution-grid-snake.svg) | Animated SVG |
+
+</details>
+
+</div>
 
 ---
 

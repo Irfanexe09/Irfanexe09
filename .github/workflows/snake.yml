@@ -1,0 +1,58 @@
+name: Generate Pirate Contribution Voyage Snake
+
+on:
+  # Run automatically every 12 hours (00:00 and 12:00 UTC)
+  schedule:
+    - cron: "0 */12 * * *"
+
+  # Allows manual execution anytime via GitHub Actions UI
+  workflow_dispatch:
+
+  # Regenerate whenever updates are pushed to main
+  push:
+    branches:
+      - main
+
+# Minimal required permissions: write to contents to publish to the output branch
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    name: Generate Pirate Snake
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate Core Snake SVGs from Real GitHub Contribution Graph
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-raw.svg?color_snake=%23D6AD60&color_dots=%230e222e,%231D6465,%238c703b,%23D6AD60,%23F5EBD5
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Assemble Pirate Treasure Map Canvas
+        run: node scripts/assemble-pirate-voyage.js
+
+      - name: Deploy Assets to Output Branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore: update pirate contribution voyage snake [skip ci]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
