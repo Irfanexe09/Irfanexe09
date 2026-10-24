@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 280" width="100%" height="auto" fill="none">
+  <defs>
+    <!-- Ocean Deep Night Backdrop -->
+    <linearGradient id="oceanBackdrop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050C10"/>
+      <stop offset="40%" stop-color="#071116"/>
+      <stop offset="85%" stop-color="#0B1922"/>
+      <stop offset="100%" stop-color="#04090D"/>
+    </linearGradient>
+
+    <!-- Antique Gold Shimmer -->
+    <linearGradient id="goldShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9A7B38"/>
+      <stop offset="35%" stop-color="#D6AD60"/>
+      <stop offset="70%" stop-color="#F5EBD5"/>
+      <stop offset="100%" stop-color="#9A7B38"/>
+    </linearGradient>
+
+    <!-- Wave Swell Gradient -->
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D6465" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#2A8384" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1D6465" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <!-- Hull Wood Gradient -->
+    <linearGradient id="galleonWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A3A2B"/>
+      <stop offset="50%" stop-color="#422B20"/>
+      <stop offset="100%" stop-color="#261811"/>
+    </linearGradient>
+
+    <!-- Sail Parchment Gradient -->
+    <linearGradient id="galleonSail" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5EBD5"/>
+      <stop offset="50%" stop-color="#E8D8B5"/>
+      <stop offset="100%" stop-color="#C5B085"/>
+    </linearGradient>
+
+    <!-- Lantern Glow Filter -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .nautical-mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Courier New", monospace; }
+    .plaque-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; fill: #F5EBD5; text-transform: uppercase; }
+    .coords-sub { font-size: 8.5px; letter-spacing: 1.2px; fill: #D6AD60; opacity: 0.85; }
+    .legend-text { font-size: 8px; letter-spacing: 1px; fill: #E8D8B5; }
+  </style>
+
+  <!-- ================================================================= -->
+  <!-- 1. TREASURE MAP ARCHIVE CANVAS & DARK WOOD BORDER                 -->
+  <!-- ================================================================= -->
+  <rect x="2" y="2" width="936" height="276" rx="14" fill="url(#oceanBackdrop)" stroke="#422B20" stroke-width="1.8"/>
+  <rect x="5" y="5" width="930" height="270" rx="11" fill="none" stroke="#D6AD60" stroke-width="0.8" stroke-opacity="0.45"/>
+  <rect x="9" y="9" width="922" height="262" rx="8" fill="none" stroke="#D6AD60" stroke-dasharray="4 6" stroke-width="0.6" stroke-opacity="0.25"/>
+
+  <!-- Brass Corner Rivets -->
+  <g fill="#D6AD60" opacity="0.85">
+    <circle cx="16" cy="16" r="3.2"/>
+    <circle cx="16" cy="16" r="1.2" fill="#071116"/>
+    <circle cx="924" cy="16" r="3.2"/>
+    <circle cx="924" cy="16" r="1.2" fill="#071116"/>
+    <circle cx="16" cy="264" r="3.2"/>
+    <circle cx="16" cy="264" r="1.2" fill="#071116"/>
+    <circle cx="924" cy="264" r="3.2"/>
+    <circle cx="924" cy="264" r="1.2" fill="#071116"/>
+  </g>
+
+  <!-- Distant Starlight & Sea Mist -->
+  <g fill="#F5EBD5" opacity="0.35">
+    <circle cx="75" cy="24" r="0.75"/>
+    <circle cx="195" cy="18" r="1.1"/>
+    <circle cx="340" cy="26" r="0.8"/>
+    <circle cx="490" cy="16" r="1.2"/>
+    <circle cx="680" cy="22" r="0.8"/>
+    <circle cx="830" cy="18" r="1.1"/>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- 2. BRASS HEADER PLAQUE & NAUTICAL ASTROLABE                       -->
+  <!-- ================================================================= -->
+  <g transform="translate(24, 20)">
+    <!-- Astrolabe / Compass Symbol -->
+    <circle cx="12" cy="12" r="11" fill="#071116" stroke="#D6AD60" stroke-width="1.2"/>
+    <circle cx="12" cy="12" r="8" fill="none" stroke="#D6AD60" stroke-width="0.6" stroke-dasharray="2 3"/>
+    <path d="M 12 4 L 12 20 M 4 12 L 20 12" stroke="#D6AD60" stroke-width="0.9"/>
+    <path d="M 6.5 6.5 L 17.5 17.5 M 6.5 17.5 L 17.5 6.5" stroke="#D6AD60" stroke-width="0.5" stroke-opacity="0.6"/>
+    <circle cx="12" cy="12" r="2" fill="#F5EBD5"/>
+
+    <!-- Plaque Titles -->
+    <text x="34" y="10" class="nautical-mono plaque-title">⚓ THE PIRATE&apos;S CONTRIBUTION VOYAGE &#8226; DISCOVERY CHART</text>
+    <text x="34" y="22" class="nautical-mono coords-sub">BENGALURU SHIPYARD &#8226; LAT 12&#176; 58&apos; N &#8226; LON 77&#176; 35&apos; E &#8226; REAL REPOSITORY LOGBOOK</text>
+  </g>
+
+  <!-- Subtle Top Voyage Track Wave -->
+  <path d="M 460 34 C 540 28 620 40 700 32 C 780 26 840 36 910 30"
+        fill="none" stroke="#D6AD60" stroke-width="0.8" stroke-dasharray="4 6" stroke-opacity="0.3"/>
+
+  <!-- ================================================================= -->
+  <!-- 3. SAILING PIRATE SHIP ACROSS THE CHART                           -->
+  <!-- ================================================================= -->
+  <g>
+    
+      <!-- Static Galleon Position -->
+      <g transform="translate(740, 26) scale(0.65)">
+        <!-- Ship Hull -->
+        <path d="M 0 16 L 36 16 C 34 24 28 30 18 30 C 8 30 2 24 0 16 Z" fill="url(#galleonWood)" stroke="#D6AD60" stroke-width="0.8"/>
+        <line x1="6" y1="21" x2="30" y2="21" stroke="#D6AD60" stroke-width="0.5" opacity="0.6"/>
+        <!-- Main Mast & Sail -->
+        <line x1="20" y1="2" x2="20" y2="16" stroke="#422B20" stroke-width="1.4"/>
+        <path d="M 20 3 C 28 5 28 13 20 14 Z" fill="url(#galleonSail)" stroke="#422B20" stroke-width="0.6"/>
+        <!-- Fore Mast & Jib Sail -->
+        <line x1="8" y1="6" x2="8" y2="16" stroke="#422B20" stroke-width="1.2"/>
+        <path d="M 8 7 C 14 9 14 14 8 15 Z" fill="url(#galleonSail)" stroke="#422B20" stroke-width="0.5"/>
+        <!-- Jolly Roger Pennant -->
+        <path d="M 20 2 L 26 4 L 20 6 Z" fill="#071116" stroke="#D6AD60" stroke-width="0.5"/>
+        <circle cx="22" cy="4" r="0.6" fill="#F5EBD5"/>
+        <!-- Golden Stern Lantern -->
+        <circle cx="-1" cy="18" r="1.8" fill="#D6AD60" filter="url(#goldGlow)"/>
+      </g>
+    
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- 4. EMBEDDED REAL GITHUB CONTRIBUTION SNAKE GRID                   -->
+  <!-- ================================================================= -->
+  <svg x="30" y="62" width="880" height="192" viewBox="-16 -32 880 192"   xmlns="http://www.w3.org/2000/svg"><desc>Generated with https://github.com/Platane/snk</desc><style>:root{--cb:#1b1f230a;--cs:#D6AD60;--ce:#0e222e;--c0:#0e222e;--c1:#1D6465;--c2:#8c703b;--c3:#D6AD60;--c4:#F5EBD5}.c{shape-rendering:geometricPrecision;fill:var(--ce);stroke-width:1px;stroke:var(--cb);width:12px;height:12px}@keyframes c0{15.97%{fill:var(--c1)}15.99%,100%{fill:var(--ce)}}.c.c0{fill:var(--c1);transform:scale(0,1);transform-origin:0.0px 0}@keyframes u1{44.37%{transform:scale(0.000,1)}44.39%,50.29%{transform:scale(0.333,1)}50.31%,50.88%{transform:scale(0.667,1)}50.9%,100%{transform:scale(1.000,1)}}.u.u1{fill:var(--c2);transform-origin:339.2px 0}@keyframes u2{53.84%{transform:scale(0.000,1)}53.86%,54.43%{transform:scale(0.250,1)}54.45%,55.61%{transform:scale(0.500,1)}55.63%,56.2%{transform:scale(0.750,1)}56.22%,100%{transform:scale(1.000,1)}}.u.u2{fill:var(--c3);transform-origin:441.0px 0}@keyframes u3{56.79%{transform:scale(0.000,1)}56.81%,100%{transform:scale(1.000,1)}}.u.u3{fill:var(--c2);transform-origin:576.6px 0}@keyframes u4{57.39%{transform:scale(0.000,1)}57.41%,57.98%{transform:scale(0.143,1)}58%,58.57%{transform:scale(0.286,1)}58.59%,59.75%{transform:scale(0.429,1)}59.77%,60.35%{transform:scale(0.571,1)}60.37%,63.9%{transform:scale(0.714,1)}63.92%,65.67%{transform:scale(0.857,1)}65.69%,100%{transform:scale(1.000,1)}}.u.u4{fill:var(--c4);transform-origin:610.6px 0}.s{shape-rendering:geometricPrecision;fill:var(--cs);animation-name:s3}</style><rect class="c" x="2" y="2" rx="2" ry="2"/><rect class="c" x="2" y="18" rx="2" ry="2"/><rect class="c" x="2" y="34" rx="2" ry="2"/><rect class="c" x="2" y="50" rx="2" ry="2"/><rect class="c" x="2" y="66" rx="2" ry="2"/><rect class="c" x="2" y="82" rx="2" ry="2"/><rect class="c" x="2" y="98" rx="2" ry="2"/><rect class="c" x="18" y="2" rx="2" ry="2"/><rect class="c" x="18" y="18" rx="2" ry="2"/><rect class="c" x="18" y="34" rx="2" ry="2"/><rect class="c" x="18" y="50" rx="2" ry="2"/><rect class="c" x="18" y="66" rx="2" ry="2"/><rect class="c" x="18" y="82" rx="2" ry="2"/><rect class="c" x="18" y="98" rx="2" ry="2"/><rect class="c" x="34" y="2" rx="2" ry="2"/><rect class="c" x="34" y="18" rx="2" ry="2"/><rect class="c" x="34" y="34" rx="2" ry="2"/><rect class="c" x="34" y="50" rx="2" ry="2"/><rect class="c" x="34" y="66" rx="2" ry="2"/><rect class="c" x="34" y="82" rx="2" ry="2"/><rect class="c" x="34" y="98" rx="2" ry="2"/><rect class="c" x="50" y="2" rx="2" ry="2"/><rect class="c" x="50" y="18" rx="2" ry="2"/><rect class="c" x="50" y="34" rx="2" ry="2"/><rect class="c" x="50" y="50" rx="2" ry="2"/><rect class="c" x="50" y="66" rx="2" ry="2"/><rect class="c" x="50" y="82" rx="2" ry="2"/><rect class="c" x="50" y="98" rx="2" ry="2"/><rect class="c" x="66" y="2" rx="2" ry="2"/><rect class="c" x="66" y="18" rx="2" ry="2"/><rect class="c" x="66" y="34" rx="2" ry="2"/><rect class="c" x="66" y="50" rx="2" ry="2"/><rect class="c" x="66" y="66" rx="2" ry="2"/><rect class="c" x="66" y="82" rx="2" ry="2"/><rect class="c" x="66" y="98" rx="2" ry="2"/><rect class="c" x="82" y="2" rx="2" ry="2"/><rect class="c" x="82" y="18" rx="2" ry="2"/><rect class="c" x="82" y="34" rx="2" ry="2"/><rect class="c" x="82" y="50" rx="2" ry="2"/><rect class="c" x="82" y="66" rx="2" ry="2"/><rect class="c" x="82" y="82" rx="2" ry="2"/><rect class="c" x="82" y="98" rx="2" ry="2"/><rect class="c" x="98" y="2" rx="2" ry="2"/><rect class="c" x="98" y="18" rx="2" ry="2"/><rect class="c" x="98" y="34" rx="2" ry="2"/><rect class="c" x="98" y="50" rx="2" ry="2"/><rect class="c" x="98" y="66" rx="2" ry="2"/><rect class="c" x="98" y="82" rx="2" ry="2"/><rect class="c" x="98" y="98" rx="2" ry="2"/><rect class="c" x="114" y="2" rx="2" ry="2"/><rect class="c" x="114" y="18" rx="2" ry="2"/><rect class="c" x="114" y="34" rx="2" ry="2"/><rect class="c" x="114" y="50" rx="2" ry="2"/><rect class="c" x="114" y="66" rx="2" ry="2"/><rect class="c" x="114" y="82" rx="2" ry="2"/><rect class="c" x="114" y="98" rx="2" ry="2"/><rect class="c" x="130" y="2" rx="2" ry="2"/><rect class="c" x="130" y="18" rx="2" ry="2"/><rect class="c" x="130" y="34" rx="2" ry="2"/><rect class="c" x="130" y="50" rx="2" ry="2"/><rect class="c" x="130" y="66" rx="2" ry="2"/><rect class="c" x="130" y="82" rx="2" ry="2"/><rect class="c" x="130" y="98" rx="2" ry="2"/><rect class="c" x="146" y="2" rx="2" ry="2"/><rect class="c" x="146" y="18" rx="2" ry="2"/><rect class="c" x="146" y="34" rx="2" ry="2"/><rect class="c" x="146" y="50" rx="2" ry="2"/><rect class="c" x="146" y="66" rx="2" ry="2"/><rect class="c" x="146" y="82" rx="2" ry="2"/><rect class="c" x="146" y="98" rx="2" ry="2"/><rect class="c" x="162" y="2" rx="2" ry="2"/><rect class="c" x="162" y="18" rx="2" ry="2"/><rect class="c" x="162" y="34" rx="2" ry="2"/><rect class="c" x="162" y="50" rx="2" ry="2"/><rect class="c" x="162" y="66" rx="2" ry="2"/><rect class="c" x="162" y="82" rx="2" ry="2"/><rect class="c" x="162" y="98" rx="2" ry="2"/><rect class="c" x="178" y="2" rx="2" ry="2"/><rect class="c" x="178" y="18" rx="2" ry="2"/><rect class="c" x="178" y="34" rx="2" ry="2"/><rect class="c" x="178" y="50" rx="2" ry="2"/><rect class="c" x="178" y="66" rx="2" ry="2"/><rect class="c" x="178" y="82" rx="2" ry="2"/><rect class="c" x="178" y="98" rx="2" ry="2"/><rect class="c" x="194" y="2" rx="2" ry="2"/><rect class="c" x="194" y="18" rx="2" ry="2"/><rect class="c" x="194" y="34" rx="2" ry="2"/><rect class="c" x="194" y="50" rx="2" ry="2"/><rect class="c" x="194" y="66" rx="2" ry="2"/><rect class="c" x="194" y="82" rx="2" ry="2"/><rect class="c" x="194" y="98" rx="2" ry="2"/><rect class="c" x="210" y="2" rx="2" ry="2"/><rect class="c" x="210" y="18" rx="2" ry="2"/><rect class="c" x="210" y="34" rx="2" ry="2"/><rect class="c" x="210" y="50" rx="2" ry="2"/><rect class="c" x="210" y="66" rx="2" ry="2"/><rect class="c" x="210" y="82" rx="2" ry="2"/><rect class="c" x="210" y="98" rx="2" ry="2"/><rect class="c" x="226" y="2" rx="2" ry="2"/><rect class="c" x="226" y="18" rx="2" ry="2"/><rect class="c" x="226" y="34" rx="2" ry="2"/><rect class="c" x="226" y="50" rx="2" ry="2"/><rect class="c" x="226" y="66" rx="2" ry="2"/><rect class="c" x="226" y="82" rx="2" ry="2"/><rect class="c" x="226" y="98" rx="2" ry="2"/><rect class="c" x="242" y="2" rx="2" ry="2"/><rect class="c" x="242" y="18" rx="2" ry="2"/><rect class="c" x="242" y="34" rx="2" ry="2"/><rect class="c c0" x="242" y="50" rx="2" ry="2"/><rect class="c" x="242" y="66" rx="2" ry="2"/><rect class="c" x="242" y="82" rx="2" ry="2"/><rect class="c" x="242" y="98" rx="2" ry="2"/><rect class="c" x="258" y="2" rx="2" ry="2"/><rect class="c" x="258" y="18" rx="2" ry="2"/><rect class="c" x="258" y="34" rx="2" ry="2"/><rect class="c" x="258" y="50" rx="2" ry="2"/><rect class="c" x="258" y="66" rx="2" ry="2"/><rect class="c" x="258" y="82" rx="2" ry="2"/><rect class="c" x="258" y="98" rx="2" ry="2"/><rect class="c c1" x="274" y="2" rx="2" ry="2"/><rect class="c" x="274" y="18" rx="2" ry="2"/><rect class="c" x="274" y="34" rx="2" ry="2"/><rect class="c" x="274" y="50" rx="2" ry="2"/><rect class="c" x="274" y="66" rx="2" ry="2"/><rect class="c" x="274" y="82" rx="2" ry="2"/><rect class="c" x="274" y="98" rx="2" ry="2"/><rect class="c" x="290" y="2" rx="2" ry="2"/><rect class="c" x="290" y="18" rx="2" ry="2"/><rect class="c" x="290" y="34" rx="2" ry="2"/><rect class="c" x="290" y="50" rx="2" ry="2"/><rect class="c" x="290" y="66" rx="2" ry="2"/><rect class="c" x="290" y="82" rx="2" ry="2"/><rect class="c" x="290" y="98" rx="2" ry="2"/><rect class="c" x="306" y="2" rx="2" ry="2"/><rect class="c c2" x="306" y="18" rx="2" ry="2"/><rect class="c" x="306" y="34" rx="2" ry="2"/><rect class="c" x="306" y="50" rx="2" ry="2"/><rect class="c" x="306" y="66" rx="2" ry="2"/><rect class="c" x="306" y="82" rx="2" ry="2"/><rect class="c" x="306" y="98" rx="2" ry="2"/><rect class="c" x="322" y="2" rx="2" ry="2"/><rect class="c" x="322" y="18" rx="2" ry="2"/><rect class="c" x="322" y="34" rx="2" ry="2"/><rect class="c" x="322" y="50" rx="2" ry="2"/><rect class="c" x="322" y="66" rx="2" ry="2"/><rect class="c" x="322" y="82" rx="2" ry="2"/><rect class="c" x="322" y="98" rx="2" ry="2"/><rect class="c" x="338" y="2" rx="2" ry="2"/><rect class="c" x="338" y="18" rx="2" ry="2"/><rect class="c" x="338" y="34" rx="2" ry="2"/><rect class="c" x="338" y="50" rx="2" ry="2"/><rect class="c" x="338" y="66" rx="2" ry="2"/><rect class="c" x="338" y="82" rx="2" ry="2"/><rect class="c" x="338" y="98" rx="2" ry="2"/><rect class="c" x="354" y="2" rx="2" ry="2"/><rect class="c" x="354" y="18" rx="2" ry="2"/><rect class="c" x="354" y="34" rx="2" ry="2"/><rect class="c" x="354" y="50" rx="2" ry="2"/><rect class="c" x="354" y="66" rx="2" ry="2"/><rect class="c" x="354" y="82" rx="2" ry="2"/><rect class="c" x="354" y="98" rx="2" ry="2"/><rect class="c" x="370" y="2" rx="2" ry="2"/><rect class="c" x="370" y="18" rx="2" ry="2"/><rect class="c" x="370" y="34" rx="2" ry="2"/><rect class="c" x="370" y="50" rx="2" ry="2"/><rect class="c" x="370" y="66" rx="2" ry="2"/><rect class="c" x="370" y="82" rx="2" ry="2"/><rect class="c" x="370" y="98" rx="2" ry="2"/><rect class="c" x="386" y="2" rx="2" ry="2"/><rect class="c" x="386" y="18" rx="2" ry="2"/><rect class="c" x="386" y="34" rx="2" ry="2"/><rect class="c" x="386" y="50" rx="2" ry="2"/><rect class="c" x="386" y="66" rx="2" ry="2"/><rect class="c" x="386" y="82" rx="2" ry="2"/><rect class="c" x="386" y="98" rx="2" ry="2"/><rect class="c" x="402" y="2" rx="2" ry="2"/><rect class="c" x="402" y="18" rx="2" ry="2"/><rect class="c" x="402" y="34" rx="2" ry="2"/><rect class="c" x="402" y="50" rx="2" ry="2"/><rect class="c" x="402" y="66" rx="2" ry="2"/><rect class="c" x="402" y="82" rx="2" ry="2"/><rect class="c" x="402" y="98" rx="2" ry="2"/><rect class="c" x="418" y="2" rx="2" ry="2"/><rect class="c" x="418" y="18" rx="2" ry="2"/><rect class="c" x="418" y="34" rx="2" ry="2"/><rect class="c" x="418" y="50" rx="2" ry="2"/><rect class="c" x="418" y="66" rx="2" ry="2"/><rect class="c" x="418" y="82" rx="2" ry="2"/><rect class="c" x="418" y="98" rx="2" ry="2"/><rect class="c" x="434" y="2" rx="2" ry="2"/><rect class="c" x="434" y="18" rx="2" ry="2"/><rect class="c" x="434" y="34" rx="2" ry="2"/><rect class="c" x="434" y="50" rx="2" ry="2"/><rect class="c" x="434" y="66" rx="2" ry="2"/><rect class="c" x="434" y="82" rx="2" ry="2"/><rect class="c" x="434" y="98" rx="2" ry="2"/><rect class="c" x="450" y="2" rx="2" ry="2"/><rect class="c" x="450" y="18" rx="2" ry="2"/><rect class="c" x="450" y="34" rx="2" ry="2"/><rect class="c" x="450" y="50" rx="2" ry="2"/><rect class="c" x="450" y="66" rx="2" ry="2"/><rect class="c" x="450" y="82" rx="2" ry="2"/><rect class="c" x="450" y="98" rx="2" ry="2"/><rect class="c" x="466" y="2" rx="2" ry="2"/><rect class="c" x="466" y="18" rx="2" ry="2"/><rect class="c" x="466" y="34" rx="2" ry="2"/><rect class="c" x="466" y="50" rx="2" ry="2"/><rect class="c" x="466" y="66" rx="2" ry="2"/><rect class="c" x="466" y="82" rx="2" ry="2"/><rect class="c" x="466" y="98" rx="2" ry="2"/><rect class="c" x="482" y="2" rx="2" ry="2"/><rect class="c" x="482" y="18" rx="2" ry="2"/><rect class="c" x="482" y="34" rx="2" ry="2"/><rect class="c" x="482" y="50" rx="2" ry="2"/><rect class="c" x="482" y="66" rx="2" ry="2"/><rect class="c" x="482" y="82" rx="2" ry="2"/><rect class="c" x="482" y="98" rx="2" ry="2"/><rect class="c" x="498" y="2" rx="2" ry="2"/><rect class="c" x="498" y="18" rx="2" ry="2"/><rect class="c" x="498" y="34" rx="2" ry="2"/><rect class="c" x="498" y="50" rx="2" ry="2"/><rect class="c" x="498" y="66" rx="2" ry="2"/><rect class="c" x="498" y="82" rx="2" ry="2"/><rect class="c" x="498" y="98" rx="2" ry="2"/><rect class="c" x="514" y="2" rx="2" ry="2"/><rect class="c" x="514" y="18" rx="2" ry="2"/><rect class="c" x="514" y="34" rx="2" ry="2"/><rect class="c" x="514" y="50" rx="2" ry="2"/><rect class="c" x="514" y="66" rx="2" ry="2"/><rect class="c" x="514" y="82" rx="2" ry="2"/><rect class="c" x="514" y="98" rx="2" ry="2"/><rect class="c" x="530" y="2" rx="2" ry="2"/><rect class="c" x="530" y="18" rx="2" ry="2"/><rect class="c" x="530" y="34" rx="2" ry="2"/><rect class="c" x="530" y="50" rx="2" ry="2"/><rect class="c" x="530" y="66" rx="2" ry="2"/><rect class="c" x="530" y="82" rx="2" ry="2"/><rect class="c" x="530" y="98" rx="2" ry="2"/><rect class="c" x="546" y="2" rx="2" ry="2"/><rect class="c" x="546" y="18" rx="2" ry="2"/><rect class="c" x="546" y="34" rx="2" ry="2"/><rect class="c" x="546" y="50" rx="2" ry="2"/><rect class="c" x="546" y="66" rx="2" ry="2"/><rect class="c" x="546" y="82" rx="2" ry="2"/><rect class="c" x="546" y="98" rx="2" ry="2"/><rect class="c" x="562" y="2" rx="2" ry="2"/><rect class="c" x="562" y="18" rx="2" ry="2"/><rect class="c" x="562" y="34" rx="2" ry="2"/><rect class="c" x="562" y="50" rx="2" ry="2"/><rect class="c" x="562" y="66" rx="2" ry="2"/><rect class="c" x="562" y="82" rx="2" ry="2"/><rect class="c" x="562" y="98" rx="2" ry="2"/><rect class="c" x="578" y="2" rx="2" ry="2"/><rect class="c" x="578" y="18" rx="2" ry="2"/><rect class="c" x="578" y="34" rx="2" ry="2"/><rect class="c" x="578" y="50" rx="2" ry="2"/><rect class="c" x="578" y="66" rx="2" ry="2"/><rect class="c" x="578" y="82" rx="2" ry="2"/><rect class="c" x="578" y="98" rx="2" ry="2"/><rect class="c" x="594" y="2" rx="2" ry="2"/><rect class="c" x="594" y="18" rx="2" ry="2"/><rect class="c" x="594" y="34" rx="2" ry="2"/><rect class="c" x="594" y="50" rx="2" ry="2"/><rect class="c" x="594" y="66" rx="2" ry="2"/><rect class="c" x="594" y="82" rx="2" ry="2"/><rect class="c" x="594" y="98" rx="2" ry="2"/><rect class="c" x="610" y="2" rx="2" ry="2"/><rect class="c" x="610" y="18" rx="2" ry="2"/><rect class="c" x="610" y="34" rx="2" ry="2"/><rect class="c" x="610" y="50" rx="2" ry="2"/><rect class="c" x="610" y="66" rx="2" ry="2"/><rect class="c" x="610" y="82" rx="2" ry="2"/><rect class="c" x="610" y="98" rx="2" ry="2"/><rect class="c" x="626" y="2" rx="2" ry="2"/><rect class="c" x="626" y="18" rx="2" ry="2"/><rect class="c" x="626" y="34" rx="2" ry="2"/><rect class="c" x="626" y="50" rx="2" ry="2"/><rect class="c" x="626" y="66" rx="2" ry="2"/><rect class="c" x="626" y="82" rx="2" ry="2"/><rect class="c" x="626" y="98" rx="2" ry="2"/><rect class="c" x="642" y="2" rx="2" ry="2"/><rect class="c" x="642" y="18" rx="2" ry="2"/><rect class="c" x="642" y="34" rx="2" ry="2"/><rect class="c" x="642" y="50" rx="2" ry="2"/><rect class="c" x="642" y="66" rx="2" ry="2"/><rect class="c" x="642" y="82" rx="2" ry="2"/><rect class="c" x="642" y="98" rx="2" ry="2"/><rect class="c" x="658" y="2" rx="2" ry="2"/><rect class="c" x="658" y="18" rx="2" ry="2"/><rect class="c" x="658" y="34" rx="2" ry="2"/><rect class="c" x="658" y="50" rx="2" ry="2"/><rect class="c" x="658" y="66" rx="2" ry="2"/><rect class="c" x="658" y="82" rx="2" ry="2"/><rect class="c" x="658" y="98" rx="2" ry="2"/><rect class="c" x="674" y="2" rx="2" ry="2"/><rect class="c" x="674" y="18" rx="2" ry="2"/><rect class="c" x="674" y="34" rx="2" ry="2"/><rect class="c c3" x="674" y="50" rx="2" ry="2"/><rect class="c" x="674" y="66" rx="2" ry="2"/><rect class="c" x="674" y="82" rx="2" ry="2"/><rect class="c" x="674" y="98" rx="2" ry="2"/><rect class="c" x="690" y="2" rx="2" ry="2"/><rect class="c" x="690" y="18" rx="2" ry="2"/><rect class="c" x="690" y="34" rx="2" ry="2"/><rect class="c" x="690" y="50" rx="2" ry="2"/><rect class="c" x="690" y="66" rx="2" ry="2"/><rect class="c" x="690" y="82" rx="2" ry="2"/><rect class="c" x="690" y="98" rx="2" ry="2"/><rect class="c" x="706" y="2" rx="2" ry="2"/><rect class="c" x="706" y="18" rx="2" ry="2"/><rect class="c" x="706" y="34" rx="2" ry="2"/><rect class="c" x="706" y="50" rx="2" ry="2"/><rect class="c" x="706" y="66" rx="2" ry="2"/><rect class="c" x="706" y="82" rx="2" ry="2"/><rect class="c" x="706" y="98" rx="2" ry="2"/><rect class="c" x="722" y="2" rx="2" ry="2"/><rect class="c" x="722" y="18" rx="2" ry="2"/><rect class="c" x="722" y="34" rx="2" ry="2"/><rect class="c" x="722" y="50" rx="2" ry="2"/><rect class="c" x="722" y="66" rx="2" ry="2"/><rect class="c" x="722" y="82" rx="2" ry="2"/><rect class="c" x="722" y="98" rx="2" ry="2"/><rect class="c" x="738" y="2" rx="2" ry="2"/><rect class="c" x="738" y="18" rx="2" ry="2"/><rect class="c" x="738" y="34" rx="2" ry="2"/><rect class="c" x="738" y="50" rx="2" ry="2"/><rect class="c" x="738" y="66" rx="2" ry="2"/><rect class="c" x="738" y="82" rx="2" ry="2"/><rect class="c" x="738" y="98" rx="2" ry="2"/><rect class="c" x="754" y="2" rx="2" ry="2"/><rect class="c" x="754" y="18" rx="2" ry="2"/><rect class="c c4" x="754" y="34" rx="2" ry="2"/><rect class="c c5" x="754" y="50" rx="2" ry="2"/><rect class="c" x="754" y="66" rx="2" ry="2"/><rect class="c" x="754" y="82" rx="2" ry="2"/><rect class="c" x="754" y="98" rx="2" ry="2"/><rect class="c" x="770" y="2" rx="2" ry="2"/><rect class="c" x="770" y="18" rx="2" ry="2"/><rect class="c" x="770" y="34" rx="2" ry="2"/><rect class="c" x="770" y="50" rx="2" ry="2"/><rect class="c c6" x="770" y="66" rx="2" ry="2"/><rect class="c" x="770" y="82" rx="2" ry="2"/><rect class="c" x="770" y="98" rx="2" ry="2"/><rect class="c" x="786" y="2" rx="2" ry="2"/><rect class="c" x="786" y="18" rx="2" ry="2"/><rect class="c" x="786" y="34" rx="2" ry="2"/><rect class="c" x="786" y="50" rx="2" ry="2"/><rect class="c" x="786" y="66" rx="2" ry="2"/><rect class="c" x="786" y="82" rx="2" ry="2"/><rect class="c" x="786" y="98" rx="2" ry="2"/><rect class="c" x="802" y="2" rx="2" ry="2"/><rect class="c" x="802" y="18" rx="2" ry="2"/><rect class="c c7" x="802" y="34" rx="2" ry="2"/><rect class="c c8" x="802" y="50" rx="2" ry="2"/><rect class="c c9" x="802" y="66" rx="2" ry="2"/><rect class="c ca" x="802" y="82" rx="2" ry="2"/><rect class="c cb" x="802" y="98" rx="2" ry="2"/><rect class="c cc" x="818" y="2" rx="2" ry="2"/><rect class="c cd" x="818" y="18" rx="2" ry="2"/><rect class="c ce" x="818" y="34" rx="2" ry="2"/><rect class="c cf" x="818" y="50" rx="2" ry="2"/><rect class="c cg" x="818" y="66" rx="2" ry="2"/><rect class="c ch" x="818" y="82" rx="2" ry="2"/><rect class="c ci" x="818" y="98" rx="2" ry="2"/><rect class="c cj" x="834" y="2" rx="2" ry="2"/><rect class="c ck" x="834" y="18" rx="2" ry="2"/><rect class="c cl" x="834" y="34" rx="2" ry="2"/><rect class="c cm" x="834" y="50" rx="2" ry="2"/><rect class="c cn" x="834" y="66" rx="2" ry="2"/><rect class="c co" x="834" y="82" rx="2" ry="2"/><rect class="c" x="834" y="98" rx="2" ry="2"/><rect class="u u0" height="12" width="339.8" x="0.0" y="144"/><rect class="u u1" height="12" width="102.4" x="339.2" y="144"/><rect class="u u2" height="12" width="136.3" x="441.0" y="144"/><rect class="u u3" height="12" width="34.5" x="576.6" y="144"/><rect class="u u4" height="12" width="238.0" x="610.6" y="144"/><rect class="s s0" x="0.8" y="0.8" width="14.4" height="14.4" rx="4.5" ry="4.5"/><rect class="s s1" x="1.8" y="1.8" width="12.3" height="12.3" rx="4.1" ry="4.1"/><rect class="s s2" x="2.6" y="2.6" width="10.8" height="10.8" rx="3.6" ry="3.6"/><rect class="s s3" x="3.0" y="3.0" width="9.9" height="9.9" rx="3.3" ry="3.3"/></svg>
+
+  <!-- ================================================================= -->
+  <!-- 5. TREASURE DISCOVERY LEGEND & SHIP LOG FOOTER                    -->
+  <!-- ================================================================= -->
+  <g transform="translate(24, 260)">
+    <!-- Footer Credits -->
+    <text x="0" y="0" class="nautical-mono legend-text" fill="#D6AD60" opacity="0.8">
+      DISCOVERIES CHARTED ACROSS UNCHARTED CODEBASES &#8226; SHAIK IRFAN (IRFAN.EXE)
+    </text>
+
+    <!-- Legend (Treasure Density Scale) -->
+    <g transform="translate(680, -7)">
+      <text x="-48" y="7" class="nautical-mono" font-size="8" fill="#E8D8B5" opacity="0.75">CALM SEA</text>
+      <!-- Level 0: Deep Ocean -->
+      <rect x="0" y="0" width="8.5" height="8.5" rx="2" fill="#0e222e" stroke="#1D6465" stroke-width="0.5"/>
+      <!-- Level 1: Muted Teal Depth -->
+      <rect x="14" y="0" width="8.5" height="8.5" rx="2" fill="#1D6465"/>
+      <!-- Level 2: Bronze Doubloon -->
+      <rect x="28" y="0" width="8.5" height="8.5" rx="2" fill="#8c703b"/>
+      <!-- Level 3: Antique Gold -->
+      <rect x="42" y="0" width="8.5" height="8.5" rx="2" fill="#D6AD60"/>
+      <!-- Level 4: Radiant Treasure -->
+      <rect x="56" y="0" width="8.5" height="8.5" rx="2" fill="#F5EBD5"/>
+      <text x="72" y="7" class="nautical-mono" font-size="8" fill="#D6AD60" font-weight="700">TREASURE HOARD</text>
+    </g>
+  </g>
+</svg>
